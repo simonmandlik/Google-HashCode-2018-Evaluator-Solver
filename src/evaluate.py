@@ -1,4 +1,4 @@
-from util import Car, read_input
+from src.util import Car, read_input
 
 
 def evaluate(in_file, out_file):
