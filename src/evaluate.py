@@ -1,8 +1,8 @@
-from src.util import Car, read_input
+from util import Car, read_input
 
 
 def evaluate(in_file, out_file):
-    _, _, F, B, _, rides = read_input(in_file)
+    _, _, B, _, rides, cars = read_input(in_file)
     rides = rides
     used_rides = [False] * len(rides)
 
@@ -13,8 +13,7 @@ def evaluate(in_file, out_file):
         exit(0)
 
     with open(out_file, 'r') as f:
-        for _ in range(F):
-            c = Car()
+        for c in cars:
             line = [int(x) for x in f.readline().strip().split()]
             if line[0] != len(line)-1:
                 error()
